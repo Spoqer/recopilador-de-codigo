@@ -1,7 +1,12 @@
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.*;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -10,11 +15,19 @@ import java.util.Arrays;
  */
 public class RecopiladorDeCodigo {
     private static XWPFDocument documentoDeSalida = new XWPFDocument();
+    private static XWPFStyles estilos = documentoDeSalida.createStyles();
 
     enum Opciones {
         h,
         r;
     }
+
+    enum Estilos {
+        Contenido,
+        Carpeta,
+        Archivo
+    }
+
 
     /**
      * Corre el programa.
@@ -27,6 +40,11 @@ public class RecopiladorDeCodigo {
         ArrayList<File> directoriosAndArchivos = new ArrayList<>();
         String directorio = "";
 
+        //crear estilos
+        crearEstilo(Estilos.Contenido.toString());
+        crearEstilo(Estilos.Carpeta.toString(), 1);
+        crearEstilo(Estilos.Archivo.toString(), 2);
+
         for (String argumento :
                 argumentos) {
             System.out.println(argumento);
@@ -35,8 +53,6 @@ public class RecopiladorDeCodigo {
         try {
 
             FileOutputStream salida = new FileOutputStream(new File("recopilacion.docx"));
-            documentoDeSalida.write(salida);
-            salida.close();
 
             if (!(args.length > 0)) {
                 System.out.println("No se definieron argumentos para el codigo a recopilar");
@@ -70,19 +86,21 @@ public class RecopiladorDeCodigo {
                         argumentos) {
                     System.out.printf("-- %s\n", tipoDeArchivo);
                 }
-                directoriosAndArchivos = listaDeCarpetasAndArchivos(carpeta, argumentos);
+                directoriosAndArchivos = recopilarCarpetasAndArchivos(carpeta, argumentos);
 
             } else {
                 System.out.printf("Path invalido: %s", argumentos);
             }
 
-            for (File entry :directoriosAndArchivos) {
-                if (entry.isDirectory()) {
-                    System.out.print(">>");
-                }
-                System.out.println(entry.getName());
-
-            }
+//            for (File entry :directoriosAndArchivos) {
+//                if (entry.isDirectory()) {
+//                    System.out.print(">>");
+//                }
+//                System.out.println(entry.getName());
+//
+//            }
+            documentoDeSalida.write(salida);
+            salida.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -90,28 +108,91 @@ public class RecopiladorDeCodigo {
 
     }
 
-    private static ArrayList<File> listaDeCarpetasAndArchivos(final File directorioRaiz, ArrayList<String> tiposDeArchivo) {
+    private static ArrayList<File> recopilarCarpetasAndArchivos(final File directorioRaiz,
+                                                                ArrayList<String> tiposDeArchivo)
+    throws IOException{
         ArrayList<File> listaDeCarpetasAndArchivos = new ArrayList<>();
+        if (directorioRaiz.isDirectory()) {
+            //escribirNombre(directorioRaiz, Estilos.Carpeta);
 
-        for (final File entry : directorioRaiz.listFiles()) {
-            if (entry.isDirectory()) {
-                listaDeCarpetasAndArchivos.add(entry);
-                listaDeCarpetasAndArchivos.addAll(listaDeCarpetasAndArchivos(entry, tiposDeArchivo));
-            } else {
-                for (String tipoDeArchivo : tiposDeArchivo) {
-                    String extension = entry.getName();
-                    String[] nombreArchivo = extension.split("\\.");
-                    if (nombreArchivo.length > 1) {
-                        extension= nombreArchivo[1];
-                        if (extension.equals(tipoDeArchivo)) {
-                            listaDeCarpetasAndArchivos.add(0, entry);
+
+            for (final File entry : directorioRaiz.listFiles()) {
+                if (entry.isDirectory()) {
+                    listaDeCarpetasAndArchivos.add(entry);
+                    listaDeCarpetasAndArchivos.addAll(recopilarCarpetasAndArchivos(entry, tiposDeArchivo));
+                } else {
+                    for (String tipoDeArchivo : tiposDeArchivo) {
+                        String extension = entry.getName();
+                        String[] nombreArchivo = extension.split("\\.");
+                        if (nombreArchivo.length > 1) {
+                            extension = nombreArchivo[1];
+                            if (extension.equals(tipoDeArchivo)) {
+                                escribirNombre(entry, Estilos.Archivo);
+                                escribirContenido(entry);
+                                listaDeCarpetasAndArchivos.add(0, entry);
+                            }
                         }
                     }
                 }
             }
+        } else {
+            System.out.printf("%s - no es un directorio\n", directorioRaiz.getName());
         }
 
+
         return listaDeCarpetasAndArchivos;
+    }
+
+    private static void escribirNombre(File file, Estilos tipo) {
+        XWPFParagraph parrafo = documentoDeSalida.createParagraph();
+        XWPFRun run = parrafo.createRun();
+        run.setText(file.getPath());
+        parrafo.setStyle(tipo.toString());
+    }
+
+    private static void escribirContenido(File archivo) throws IOException {
+        XWPFParagraph parrafo = documentoDeSalida.createParagraph();
+        XWPFRun run = parrafo.createRun();
+        String contenido = new String(Files.readAllBytes(Paths.get(archivo.toURI())));
+
+        run.setText(contenido);
+
+        parrafo.setStyle(Estilos.Contenido.toString());
+    }
+
+    private static void crearEstilo(String nombre, int headingLevel) {
+        CTStyle ctStyle = CTStyle.Factory.newInstance();
+        ctStyle.setStyleId(nombre);
+
+        CTString nombreEstilo = CTString.Factory.newInstance();
+        nombreEstilo.setVal(nombre);
+        ctStyle.setName(nombreEstilo);
+
+        CTDecimalNumber numeroDeIndentado = CTDecimalNumber.Factory.newInstance();
+
+        CTOnOff onOff = CTOnOff.Factory.newInstance();
+        ctStyle.setUnhideWhenUsed(onOff);
+
+        ctStyle.setQFormat(onOff);
+
+        if (headingLevel >= 0) {
+            numeroDeIndentado.setVal(BigInteger.valueOf(headingLevel));
+            ctStyle.setUiPriority(numeroDeIndentado);
+            CTPPr ppr = CTPPr.Factory.newInstance();
+            ppr.setOutlineLvl(numeroDeIndentado);
+            ctStyle.setPPr(ppr);
+        } else {
+            numeroDeIndentado.setVal(BigInteger.valueOf(estilos.getNumberOfStyles()+1));
+            ctStyle.setUiPriority(numeroDeIndentado);
+        }
+
+        XWPFStyle estilo = new XWPFStyle(ctStyle);
+        estilo.setType(STStyleType.PARAGRAPH);
+        estilos.addStyle(estilo);
+    }
+
+    private static void crearEstilo(String nombre) {
+        crearEstilo(nombre, -1);
     }
 
     private static void mostrarAyuda() {

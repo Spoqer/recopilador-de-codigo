@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b633684b-6367-4a6f-baa5-199f2c1a0e61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/recopilador-de-codigo/RecopiladorDeCodigo$Opciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/recopilador-de-codigo/RecopiladorDeCodigo$Opciones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/recopilador-de-codigo/RecopiladorDeCodigo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/recopilador-de-codigo/RecopiladorDeCodigo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recopilador-de-codigo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/recopilador-de-codigo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recopilacion.docx" beforeDir="false" afterPath="$PROJECT_DIR$/recopilacion.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RecopiladorDeCodigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecopiladorDeCodigo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,11 +17,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RecopiladorDeCodigo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="100" column="68" selection-start-line="100" selection-start-column="68" selection-end-line="100" selection-end-column="68" />
+            <state relative-caret-position="158">
+              <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#RecopiladorDeCodigo#0" />
+                <element signature="class#Opciones#0;class#RecopiladorDeCodigo#0" />
+                <element signature="docComment;method#main#0;class#RecopiladorDeCodigo#0" />
+                <element signature="e#948#993#1" />
+                <element signature="e#709#2090#0" />
+                <element signature="e#913#1022#1" />
+                <element signature="e#1145#1216#1" />
+                <element signature="e#1348#1561#1" />
+                <element signature="e#1666#1990#1" />
+                <element signature="e#1711#1795#1" />
+                <element signature="e#2360#2422#1" />
+                <element signature="e#1996#2079#1" />
+                <element signature="e#2772#2828#0" />
+                <element signature="e#2111#2155#0" />
+                <element signature="e#4376#4421#1" />
+                <element signature="method#crearEstilo#0;class#RecopiladorDeCodigo#0" />
+                <element signature="e#5978#5979#0" expanded="true" />
+                <element signature="e#6017#6018#0" expanded="true" />
                 <element signature="method#mostrarAyuda#0;class#RecopiladorDeCodigo#0" />
+                <element signature="e#3014#3126#0" />
               </folding>
             </state>
           </provider>
@@ -84,7 +98,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554404725873" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554409288270" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jars/poi-4.0.1/lib/commons-compress-1.18.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -105,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.relativo">
+  <component name="RunManager" selected="Application.RecopiladorDeCodigo">
     <configuration name="Ayuda" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="RecopiladorDeCodigo" />
       <module name="recopilador-de-codigo" />
@@ -117,7 +131,7 @@
     <configuration name="RecopiladorDeCodigo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RecopiladorDeCodigo" />
       <module name="recopilador-de-codigo" />
-      <option name="PROGRAM_PARAMETERS" value="c:\Pruebas\textos" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\guadalupe.lopez\Desktop\SAFE\MSA\src properties java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,7 +146,7 @@
     <configuration name="relativo" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="RecopiladorDeCodigo" />
       <module name="recopilador-de-codigo" />
-      <option name="PROGRAM_PARAMETERS" value="-r \ html" />
+      <option name="PROGRAM_PARAMETERS" value="-r \ txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,12 +176,12 @@
       <workItem from="1554327105514" duration="2934000" />
       <workItem from="1554331208345" duration="173000" />
       <workItem from="1554359318407" duration="1674000" />
-      <workItem from="1554397850079" duration="6651000" />
+      <workItem from="1554397850079" duration="11217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11259000" />
+    <option name="totallyTimeSpent" value="15825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-301" width="1936" height="1096" extended-state="6" />
@@ -211,11 +225,29 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/RecopiladorDeCodigo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="100" column="68" selection-start-line="100" selection-start-column="68" selection-end-line="100" selection-end-column="68" />
+        <state relative-caret-position="158">
+          <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RecopiladorDeCodigo#0" />
+            <element signature="class#Opciones#0;class#RecopiladorDeCodigo#0" />
+            <element signature="docComment;method#main#0;class#RecopiladorDeCodigo#0" />
+            <element signature="e#948#993#1" />
+            <element signature="e#709#2090#0" />
+            <element signature="e#913#1022#1" />
+            <element signature="e#1145#1216#1" />
+            <element signature="e#1348#1561#1" />
+            <element signature="e#1666#1990#1" />
+            <element signature="e#1711#1795#1" />
+            <element signature="e#2360#2422#1" />
+            <element signature="e#1996#2079#1" />
+            <element signature="e#2772#2828#0" />
+            <element signature="e#2111#2155#0" />
+            <element signature="e#4376#4421#1" />
+            <element signature="method#crearEstilo#0;class#RecopiladorDeCodigo#0" />
+            <element signature="e#5978#5979#0" expanded="true" />
+            <element signature="e#6017#6018#0" expanded="true" />
             <element signature="method#mostrarAyuda#0;class#RecopiladorDeCodigo#0" />
+            <element signature="e#3014#3126#0" />
           </folding>
         </state>
       </provider>
