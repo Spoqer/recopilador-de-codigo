@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b633684b-6367-4a6f-baa5-199f2c1a0e61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recopilacion.docx" beforeDir="false" afterPath="$PROJECT_DIR$/recopilacion.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecopiladorDeCodigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecopiladorDeCodigo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RecopiladorDeCodigo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+            <state relative-caret-position="425">
+              <caret line="128" column="76" selection-start-line="128" selection-start-column="75" selection-end-line="128" selection-end-column="76" />
               <folding>
                 <element signature="docComment;class#RecopiladorDeCodigo#0" />
                 <element signature="class#Opciones#0;class#RecopiladorDeCodigo#0" />
@@ -98,7 +98,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554410827723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554412668289" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jars/poi-4.0.1/lib/commons-compress-1.18.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -131,7 +131,7 @@
     <configuration name="RecopiladorDeCodigo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RecopiladorDeCodigo" />
       <module name="recopilador-de-codigo" />
-      <option name="PROGRAM_PARAMETERS" value="C:\Users\guadalupe.lopez\Desktop\SAFE\MSA\src properties java" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\guadalupe.lopez\Desktop\nginx-1.14.0\html\dgc\assets html xml jpr jsp tld properties java js css" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,12 +176,12 @@
       <workItem from="1554327105514" duration="2934000" />
       <workItem from="1554331208345" duration="173000" />
       <workItem from="1554359318407" duration="1674000" />
-      <workItem from="1554397850079" duration="12789000" />
+      <workItem from="1554397850079" duration="14991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17397000" />
+    <option name="totallyTimeSpent" value="19599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-301" width="1936" height="1096" extended-state="6" />
@@ -225,8 +225,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/RecopiladorDeCodigo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+        <state relative-caret-position="425">
+          <caret line="128" column="76" selection-start-line="128" selection-start-column="75" selection-end-line="128" selection-end-column="76" />
           <folding>
             <element signature="docComment;class#RecopiladorDeCodigo#0" />
             <element signature="class#Opciones#0;class#RecopiladorDeCodigo#0" />

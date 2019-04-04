@@ -126,7 +126,7 @@ public class RecopiladorDeCodigo {
                         String extension = entry.getName();
                         String[] nombreArchivo = extension.split("\\.");
                         if (nombreArchivo.length > 1) {
-                            extension = nombreArchivo[1];
+                            extension = nombreArchivo[nombreArchivo.length-1];
                             if (extension.equals(tipoDeArchivo)) {
                                 escribirNombre(entry, Estilos.Archivo);
                                 escribirContenido(entry);
