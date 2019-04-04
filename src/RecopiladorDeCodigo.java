@@ -1,9 +1,17 @@
+import org.apache.poi.*;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class RecopiladorDeCodigo {
     enum Opciones {
-        h;
+        h,
+        r;
     }
 
     public static void main(String[] args) {
+        ArrayList<String> tiposDeArchivo = new ArrayList<>(Arrays.asList(args));
         //TODO: Recursivamente revisa los archivos de una carpeta, si son de algún tipo seleccionado,
         // los devuelve y añade al documento, si no, los ignora... y si es una carpeta, corre dentro de ella.
         // El encabezado de cada archivo es su ruta y su nombre
@@ -15,7 +23,20 @@ public class RecopiladorDeCodigo {
         //Para desplegar la ayuda, el primer argumento debe ser -h
         if (args[0].equals("-" + Opciones.h)) {
             mostrarAyuda();
+            return;
         }
+
+        //TODO: Validar el path
+        boolean pathValido = true;
+        if (pathValido) {
+            ArrayList<File> directoriosAndArchivos = listarDirectoriosAndArchivos();
+        }
+
+    }
+
+    private static ArrayList<File> listarDirectoriosAndArchivos() {
+        //TODO: Implementar
+        return null;
     }
 
     private static void mostrarAyuda() {
@@ -23,8 +44,8 @@ public class RecopiladorDeCodigo {
         System.out.println();
         System.out.println("Para usar, se necesitan al menos 2 argumentos");
         System.out.println("1.- La ruta del directorio raiz del proyecto a recopilar");
-        System.out.println("Se puede usar la opcion -r como primer argumento para que la ruta sea relativa " +
-                "al directorio en donde se corre la aplicación");
+//        System.out.println("Se puede usar la opcion -r como primer argumento para que la ruta sea relativa " +
+//                "al directorio en donde se corre la aplicación");
         System.out.println("2.- Los tipos de archivo a recopilar, por ejemplo \"java\", \"jsp\", etc.");
         System.out.println("Debe haber al menos uno, pueden ser varios");
         System.out.println();
