@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RecopiladorDeCodigo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
+            <state relative-caret-position="221">
+              <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
               <folding>
                 <element signature="docComment;class#RecopiladorDeCodigo#0" />
                 <element signature="class#Opciones#0;class#RecopiladorDeCodigo#0" />
@@ -65,10 +65,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1911" />
-    <option name="y" value="-303" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+    <option name="x" value="1912" />
+    <option name="y" value="-301" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -98,7 +98,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554409288270" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554410520491" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jars/poi-4.0.1/lib/commons-compress-1.18.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -176,12 +176,12 @@
       <workItem from="1554327105514" duration="2934000" />
       <workItem from="1554331208345" duration="173000" />
       <workItem from="1554359318407" duration="1674000" />
-      <workItem from="1554397850079" duration="11217000" />
+      <workItem from="1554397850079" duration="12479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15825000" />
+    <option name="totallyTimeSpent" value="17087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-301" width="1936" height="1096" extended-state="6" />
@@ -225,8 +225,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/RecopiladorDeCodigo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
+        <state relative-caret-position="221">
+          <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
           <folding>
             <element signature="docComment;class#RecopiladorDeCodigo#0" />
             <element signature="class#Opciones#0;class#RecopiladorDeCodigo#0" />

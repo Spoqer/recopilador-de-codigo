@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Recopila el codigo de un programa en un solo archivo de word.
@@ -145,6 +146,7 @@ public class RecopiladorDeCodigo {
 
     private static void escribirNombre(File file, Estilos tipo) {
         XWPFParagraph parrafo = documentoDeSalida.createParagraph();
+        parrafo.setPageBreak(true);
         XWPFRun run = parrafo.createRun();
         run.setText(file.getPath());
         parrafo.setStyle(tipo.toString());
@@ -153,9 +155,12 @@ public class RecopiladorDeCodigo {
     private static void escribirContenido(File archivo) throws IOException {
         XWPFParagraph parrafo = documentoDeSalida.createParagraph();
         XWPFRun run = parrafo.createRun();
-        String contenido = new String(Files.readAllBytes(Paths.get(archivo.toURI())));
+        Scanner scanner = new Scanner(archivo);
 
-        run.setText(contenido);
+        while (scanner.hasNextLine()) {
+            run.setText(scanner.nextLine());
+            run.addBreak();
+        }
 
         parrafo.setStyle(Estilos.Contenido.toString());
     }
